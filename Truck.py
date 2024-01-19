@@ -3,7 +3,7 @@ from PackagePropertyTable import PackagePropertyTable
 class Truck:
 
     def __init__(self, truck_id, driver=""):
-        self.MAX_LOAD = 20
+        self.MAX_LOAD = 50
         self.AVG_MPH = 40
         self.driver = driver
         self.delivery_queue = []

@@ -1,6 +1,6 @@
 # James Clair, 000847594
 
-import copy
+import copy,random
 import LoadData
 import Time
 import ShortestPath
@@ -10,7 +10,7 @@ from Truck import Truck
 from Package import Package
 from Location import Location
 from Data.PathToCoordinates import convert_paths_to_coordinates
-from Data.visualize import visualize
+
 def check_status(current_time, hub, packages):
     print()
     packages_by_status = hub.get_packages_by_status(packages)
@@ -32,13 +32,12 @@ def check_status(current_time, hub, packages):
 
 
 # Total runtime complexity = O(N) + O(N^3) + O(N^3) + O(N^3) = O(N^3)
-def process_optimize():
-    packages = LoadData.load_packages()
-    distance_graph = LoadData.load_distances()
-
+def process_optimize(connection):
+    packages = LoadData.load_packages(connection)
+    distance_graph = LoadData.load_distances(packages)
     hub = Hub()
     print("<------------Processing and loading special packages on trucks---------------->")
-    trucks = [Truck(1, hub.drivers[0]), Truck(2, hub.drivers[1]), Truck(3),Truck(4)]
+    trucks = [Truck(random.randint(1,  2147483647), hub.drivers[0]), Truck(random.randint(1, 2147483647), hub.drivers[1]), Truck(random.randint(1, 2147483647)),Truck(random.randint(1, 2147483647))]
     packages_by_id = hub.get_packages_by_id(packages)
     unloaded_packages = []
 
@@ -86,10 +85,11 @@ def process_optimize():
             #check tinh dung dan 
             closest_truck_distance = float('inf')
             for other_truck in trucks:
-                if other_truck.skip == False and other_truck != truck and other_truck.current_location != None:  # Không so sánh với chính xe đang xét
+                if other_truck.skip == False and other_truck != truck and other_truck.current_location != None:  # Không so sánh với chính xe đang xét, với mỗi xe mà ko phải tại hub, tìm ra khoảng cách từ điểm gần nhất với xe 1 so với xe 2 và xe 3
                     distance_to_truck = distance_graph.edge_weights[(unloaded_packages[smallest].location,other_truck.current_location)]
                     if distance_to_truck < closest_truck_distance:
                         closest_truck_distance = distance_to_truck
+                        # tìm ra được cái nhỏ nhất rồi thì đem so sánh với thằng closest_distance
             if(closest_distance > closest_truck_distance):
                 continue
             packages_at_stop = packages_by_address.read(unloaded_packages[smallest].location.label)
