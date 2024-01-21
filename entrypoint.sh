@@ -5,7 +5,7 @@ python app.py &
 APP_PID=$!
 
 # Chạy lệnh python consumer.py trong foreground
-python Kafka/consumer.py
+python Event/consumer.py
 
 # Sau khi consumer.py kết thúc, kill quá trình app.py
 kill $APP_PID

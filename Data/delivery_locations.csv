@@ -1,0 +1,64 @@
+City,Latitude,Longitude,Area_Code,Region
+Hà Giang,22.8333,104.9833,0219,Bắc Bộ
+Cao Bằng,22.6667,106.25,0206,Bắc Bộ
+Lào Cai,22.4833,103.9667,0214,Bắc Bộ
+Sơn La,21.3333,103.9,0212,Bắc Bộ
+Lai Châu,22.3964,103.4431,0213,Bắc Bộ
+Bắc Kạn,22.1333,105.8333,0209,Bắc Bộ
+Lạng Sơn,21.8333,106.7333,0205,Bắc Bộ
+Tuyên Quang,21.8333,105.25,0207,Bắc Bộ
+Yên Bái,21.7167,104.9,0216,Bắc Bộ
+Thái Nguyên,21.6,105.8333,0208,Bắc Bộ
+Điện Biên,21.3833,103.0,0215,Bắc Bộ
+Phú Thọ,21.3333,105.1667,0210,Bắc Bộ
+Vĩnh Phúc,21.3,105.6,0211,Bắc Bộ
+Bắc Giang,21.2667,106.2,0204,Bắc Bộ
+Bắc Ninh,21.1861,106.075,0222,Bắc Bộ
+Hà Nội,21.0285,105.8542,024,Bắc Bộ
+Quảng Ninh,20.9531,107.0656,0203,Bắc Bộ
+Hải Dương,20.9333,106.3333,0220,Bắc Bộ
+Hải Phòng,20.8481,106.6883,0225,Bắc Bộ
+Hòa Bình,20.8133,105.3383,0218,Bắc Bộ
+Hưng Yên,20.6467,106.0514,0221,Bắc Bộ
+Hà Nam,20.5417,105.9222,0226,Bắc Bộ
+Thái Bình,20.4556,106.3319,0227,Bắc Bộ
+Nam Định,20.4267,106.165,0228,Bắc Bộ
+Ninh Bình,20.2544,105.975,0229,Bắc Bộ
+Thanh Hóa,19.8066,105.7667,0237,Bắc Trung Bộ
+Nghệ An,18.8236,105.6328,0238,Bắc Trung Bộ
+Hà Tĩnh,18.3333,105.9,0239,Bắc Trung Bộ
+Quảng Bình,17.5364,106.5174,0232,Bắc Trung Bộ
+Quảng Trị,16.75,107.2,0233,Bắc Trung Bộ
+Thừa Thiên Huế,16.4633,107.5956,0234,Bắc Trung Bộ
+Đà Nẵng,16.0544,108.2022,0236,Bắc Trung Bộ
+Quảng Nam,15.8801,108.3385,0235,Bắc Trung Bộ
+Quảng Ngãi,15.1201,108.798,0255,Bắc Trung Bộ
+Kon Tum,14.3544,107.9833,0260,Tây Nguyên
+Gia Lai,13.9833,108.2167,0269,Tây Nguyên
+Bình Định,14.25,109.2,0256,Nam Trung Bộ
+Phú Yên,13.1667,109.1667,0257,Nam Trung Bộ
+Đắk Lắk,12.8333,108.05,0262,Tây Nguyên
+Khánh Hòa,12.25,109.2,0258,Nam Trung Bộ
+Đắk Nông,12.25,107.8,0261,Tây Nguyên
+Lâm Đồng,11.5,108.8333,0263,Tây Nguyên
+Ninh Thuận,11.75,108.3667,0259,Nam Trung Bộ
+Bình Phước,11.75,106.75,0271,Đông Nam Bộ
+Tây Ninh,11.3333,106.2,0276,Đông Nam Bộ
+Bình Dương,11.1667,106.6667,0274,Đông Nam Bộ
+Đồng Nai,11.1667,107.1667,0251,Đông Nam Bộ
+Bình Thuận,10.9333,108.1,0252,Nam Trung Bộ
+Hồ Chí Minh,10.7769,106.7009,028,Đông Nam Bộ
+Long An,10.6667,106.0,0272,Đồng Bằng Sông Cửu Long
+Bà Rịa – Vũng Tàu,10.4091,107.1386,0254,Đông Nam Bộ
+Đồng Tháp,10.6667,105.6667,0277,Đồng Bằng Sông Cửu Long
+An Giang,10.5,105.1667,0296,Đồng Bằng Sông Cửu Long
+Tiền Giang,10.3547,106.3406,0273,Đồng Bằng Sông Cửu Long
+Vĩnh Long,10.2556,105.9722,0270,Đồng Bằng Sông Cửu Long
+Bến Tre,10.2417,106.375,0275,Đồng Bằng Sông Cửu Long
+Cần Thơ,10.0333,105.7833,0292,Đồng Bằng Sông Cửu Long
+Kiên Giang,10.0,105.1667,0297,Đồng Bằng Sông Cửu Long
+Trà Vinh,9.935,106.3456,0294,Đồng Bằng Sông Cửu Long
+Hậu Giang,9.7875,105.4678,0293,Đồng Bằng Sông Cửu Long
+Sóc Trăng,9.6039,105.9811,0299,Đồng Bằng Sông Cửu Long
+Bạc Liêu,9.1667,105.15,0291,Đồng Bằng Sông Cửu Long
+Cà Mau,9.1769,105.152,0290,Đồng Bằng Sông Cửu Long

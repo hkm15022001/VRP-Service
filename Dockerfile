@@ -1,5 +1,5 @@
 # Sử dụng Python Slim image thay vì Alpine để giảm dung lượng
-FROM python:3.11-slim
+FROM python:3.9.5-slim
 
 # Thiết lập thư mục làm việc
 WORKDIR /app
@@ -8,8 +8,9 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Cài đặt các dependencies từ requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
-
+RUN apt-get update \
+    && apt-get -y install libpq-dev gcc \
+    && pip install -r requirements.txt
 # Copy tất cả các file còn lại trong thư mục hiện tại vào thư mục /app trong image
 COPY . .
 
