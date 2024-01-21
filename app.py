@@ -16,7 +16,7 @@ def after_request(response):
     response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
     return response
 # Route xử lý yêu cầu GET
-@app.route('/scem-ship/api1/process/data', methods=['GET'])
+@app.route('/scem-plan/api/process/data', methods=['GET'])
 def get_data():
     total_distance, package_list_result, truck_path,coordinates_path = process_optimize(connection)
     print("Package list result:",package_list_result)
@@ -42,9 +42,9 @@ def get_data():
 
 
 if __name__ == "__main__":
-    dbname = 'scem_database'
-    user = 'postgres'
-    password = ''
+    dbname = os.getenv("POSTGRES_DB")
+    user = os.getenv("POSTGRES_USER")
+    password = os.getenv("POSTGRES_PASS")
     host = os.getenv("POSTGRES_HOST")
     port = '5432'
 

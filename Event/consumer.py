@@ -9,9 +9,9 @@ load_dotenv(dotenv_path=env_path)
 
 
 def consume_messages_and_save(topic):
-    dbname = 'scem_database'
-    user = 'postgres'
-    password = ''
+    dbname = os.getenv("POSTGRES_DB")
+    user = os.getenv("POSTGRES_USER")
+    password = os.getenv("POSTGRES_PASS")
     host = os.getenv("POSTGRES_HOST")
     port = '5432'
 
