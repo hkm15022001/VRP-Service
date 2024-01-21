@@ -7,9 +7,7 @@ import ShortestPath
 
 from Hub import Hub
 from Truck import Truck
-from Package import Package
-from Location import Location
-from Data.PathToCoordinates import convert_paths_to_coordinates
+
 
 def check_status(current_time, hub, packages):
     print()

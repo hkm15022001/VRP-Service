@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 from  DeliveryPathFinder import process_optimize 
-from Grpc_API.app.client import send_to_grpc
 from Event.producer import produce_message
 from Model.postgres import connect_to_postgresql
 import os
@@ -17,7 +16,7 @@ def after_request(response):
     response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
     return response
 # Route xử lý yêu cầu GET
-@app.route('/api1/process/data', methods=['GET'])
+@app.route('/scem-ship/api1/process/data', methods=['GET'])
 def get_data():
     total_distance, package_list_result, truck_path,coordinates_path = process_optimize(connection)
     print("Package list result:",package_list_result)

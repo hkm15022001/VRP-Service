@@ -92,5 +92,5 @@ def load_distances(package_list):
     #         print(f"{vertex.label} - {edge.label}, Trọng số: {weight}")
     #     print()
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

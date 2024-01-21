@@ -48,7 +48,7 @@ for _ in range(40):
     request_data.update(fixed_data)
 
     # Gửi request
-    response = requests.post('http://localhost:5000/api/order/create', headers=headers, json=request_data)
+    response = requests.post('http://localhost:5000/scem-ship/api/order/create', headers=headers, json=request_data)
     
     # Kiểm tra và hiển thị kết quả
     if response.status_code == 201:
