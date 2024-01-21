@@ -20,7 +20,11 @@ def get_city_coordinates(city_names, data):
 
     return city_coordinates
 
-def convert_paths_to_coordinates(paths, data):
+def convert_paths_to_coordinates(paths):
+    current_directory = os.path.dirname(__file__)
+    file_path = os.path.join(current_directory, 'delivery_locations.csv')
+    data = read_csv(file_path)
+
     paths_coordinates = []
 
     for path in paths:
@@ -30,16 +34,11 @@ def convert_paths_to_coordinates(paths, data):
         paths_coordinates.append(city_coordinates)
 
     return paths_coordinates
+if __name__ == "__main__":
+    # Example usage:
+    paths = [['hub -> Bắc Ninh', 'Bắc Ninh -> Bắc Giang', 'Bắc Giang -> Hải Dương', 'Hải Dương -> Hải Phòng', 'Hải Phòng -> Quảng Ninh'],
+            ['hub -> Vĩnh Phúc', 'Vĩnh Phúc -> Phú Thọ', 'Phú Thọ -> Tuyên Quang', 'Tuyên Quang -> Bắc Kạn', 'Bắc Kạn -> Lạng Sơn', 'Lạng Sơn -> Hà Giang', 'Hà Giang -> Lào Cai', 'Lào Cai -> Lai Châu'],
+            ['hub -> Hưng Yên', 'Hưng Yên -> Hà Nam', 'Hà Nam -> Nam Định', 'Nam Định -> Thái Bình', 'Thái Bình -> Ninh Bình', 'Ninh Bình -> Hòa Bình', 'Hòa Bình -> Sơn La', 'Sơn La -> Điện Biên']]
 
-# Đọc dữ liệu từ tệp CSV
-current_directory = os.path.dirname(__file__)
-file_path = os.path.join(current_directory, 'delivery_locations.csv')
-data = read_csv(file_path)
-
-# Danh sách các đường đi
-paths = [['hub -> Bắc Ninh', 'Bắc Ninh -> Bắc Giang', 'Bắc Giang -> Hải Dương', 'Hải Dương -> Hải Phòng', 'Hải Phòng -> Quảng Ninh'],
-         ['hub -> Vĩnh Phúc', 'Vĩnh Phúc -> Phú Thọ', 'Phú Thọ -> Tuyên Quang', 'Tuyên Quang -> Bắc Kạn', 'Bắc Kạn -> Lạng Sơn', 'Lạng Sơn -> Hà Giang', 'Hà Giang -> Lào Cai', 'Lào Cai -> Lai Châu'],
-         ['hub -> Hưng Yên', 'Hưng Yên -> Hà Nam', 'Hà Nam -> Nam Định', 'Nam Định -> Thái Bình', 'Thái Bình -> Ninh Bình', 'Ninh Bình -> Hòa Bình', 'Hòa Bình -> Sơn La', 'Sơn La -> Điện Biên']]
-
-coordinates = convert_paths_to_coordinates(paths, data)
-print(coordinates)
+    coordinates = convert_paths_to_coordinates(paths)
+    print(coordinates)
